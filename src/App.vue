@@ -30,18 +30,27 @@ const filteredFoods = computed(() => {
   if (!city.value) return [];
   const q = placeQuery.value.trim().toLowerCase();
   if (!q) return city.value.topFoods.slice(0, 10);
-  return city.value.topFoods.filter((i) => i.name.toLowerCase().includes(q) || i.category.toLowerCase().includes(q));
+  return city.value.topFoods.filter(
+    (i) => i.name.toLowerCase().includes(q) || i.category.toLowerCase().includes(q) || (i.address ?? '').toLowerCase().includes(q)
+  );
 });
 
 const filteredPlays = computed(() => {
   if (!city.value) return [];
   const q = placeQuery.value.trim().toLowerCase();
   if (!q) return city.value.topPlays.slice(0, 10);
-  return city.value.topPlays.filter((i) => i.name.toLowerCase().includes(q) || i.category.toLowerCase().includes(q));
+  return city.value.topPlays.filter(
+    (i) => i.name.toLowerCase().includes(q) || i.category.toLowerCase().includes(q) || (i.address ?? '').toLowerCase().includes(q)
+  );
 });
 
 function citySubtitle(type: 'eat' | 'play') {
   return type === 'eat' ? '🍜 好吃榜 Top 10' : '🎡 好玩榜 Top 10';
+}
+
+function mapLink(step: { name: string; address?: string }) {
+  const keyword = encodeURIComponent(step.address ? `${step.name} ${step.address}` : step.name);
+  return `https://uri.amap.com/search?keyword=${keyword}`;
 }
 </script>
 
@@ -80,7 +89,7 @@ function citySubtitle(type: 'eat' | 'play') {
             <li v-for="(item, idx) in filteredFoods" :key="item.name">
               #{{ idx + 1 }} {{ item.name }}（综合分 {{ item.score }}）
               <br />
-              <small>位置: {{ item.lat }}, {{ item.lng }} · 分类: {{ item.category }}</small>
+              <small>地址: {{ item.address || '待补充' }} · 分类: {{ item.category }}</small>
             </li>
           </ol>
         </div>
@@ -91,7 +100,7 @@ function citySubtitle(type: 'eat' | 'play') {
             <li v-for="(item, idx) in filteredPlays" :key="item.name">
               #{{ idx + 1 }} {{ item.name }}（综合分 {{ item.score }}）
               <br />
-              <small>位置: {{ item.lat }}, {{ item.lng }} · 分类: {{ item.category }}</small>
+              <small>地址: {{ item.address || '待补充' }} · 分类: {{ item.category }}</small>
             </li>
           </ol>
         </div>
@@ -101,7 +110,8 @@ function citySubtitle(type: 'eat' | 'play') {
         <h3>🗺️ 推荐路线（半日）</h3>
         <ol>
           <li v-for="(step, idx) in city.route" :key="`${step.type}-${step.name}`">
-            {{ idx + 1 }}. [{{ step.type === 'eat' ? '吃' : '玩' }}] {{ step.name }}（{{ step.lat }}, {{ step.lng }}）
+            {{ idx + 1 }}. [{{ step.type === 'eat' ? '吃' : '玩' }}] {{ step.name }}（{{ step.address || '地址待补充' }}）
+            · <a :href="mapLink(step)" target="_blank" rel="noreferrer">地图导航</a>
           </li>
         </ol>
       </div>

@@ -1,5 +1,6 @@
 export type Place = {
   name: string;
+  address?: string;
   lat: number;
   lng: number;
   rating: number;
@@ -13,6 +14,7 @@ export type Place = {
 export type RouteStop = {
   type: 'eat' | 'play';
   name: string;
+  address?: string;
   lat: number;
   lng: number;
 };

@@ -24,10 +24,10 @@ function sortRank(items) {
 
 function buildRoute(foods, plays) {
   const route = [];
-  if (foods[0]) route.push({ type: 'eat', name: foods[0].name, lat: foods[0].lat, lng: foods[0].lng });
-  if (plays[0]) route.push({ type: 'play', name: plays[0].name, lat: plays[0].lat, lng: plays[0].lng });
-  if (foods[1]) route.push({ type: 'eat', name: foods[1].name, lat: foods[1].lat, lng: foods[1].lng });
-  if (plays[1]) route.push({ type: 'play', name: plays[1].name, lat: plays[1].lat, lng: plays[1].lng });
+  if (foods[0]) route.push({ type: 'eat', name: foods[0].name, address: foods[0].address, lat: foods[0].lat, lng: foods[0].lng });
+  if (plays[0]) route.push({ type: 'play', name: plays[0].name, address: plays[0].address, lat: plays[0].lat, lng: plays[0].lng });
+  if (foods[1]) route.push({ type: 'eat', name: foods[1].name, address: foods[1].address, lat: foods[1].lat, lng: foods[1].lng });
+  if (plays[1]) route.push({ type: 'play', name: plays[1].name, address: plays[1].address, lat: plays[1].lat, lng: plays[1].lng });
   return route;
 }
 

@@ -70,6 +70,10 @@ li {
   margin: 8px 0;
 }
 
+a {
+  color: #8bb0ff;
+}
+
 @media (max-width: 760px) {
   .grid,
   .search-row {

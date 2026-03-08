@@ -4,36 +4,36 @@
       "name": "上海",
       "slug": "shanghai",
       "foods": [
-        { "name": "大壶春生煎", "lat": 31.2243, "lng": 121.4768, "rating": 4.6, "popularity": 92, "value": 88, "stability": 85, "category": "小吃" },
-        { "name": "阿娘面馆", "lat": 31.2301, "lng": 121.4709, "rating": 4.5, "popularity": 90, "value": 80, "stability": 87, "category": "面馆" },
-        { "name": "鲜得来排骨年糕", "lat": 31.2362, "lng": 121.4918, "rating": 4.4, "popularity": 84, "value": 86, "stability": 83, "category": "本帮" },
-        { "name": "莱莱小笼", "lat": 31.2171, "lng": 121.4458, "rating": 4.7, "popularity": 88, "value": 79, "stability": 90, "category": "点心" },
-        { "name": "老吉士酒家", "lat": 31.2064, "lng": 121.4382, "rating": 4.5, "popularity": 86, "value": 72, "stability": 89, "category": "本帮" }
+        { "name": "大壶春生煎", "address": "黄浦区四川中路136号", "lat": 31.2243, "lng": 121.4768, "rating": 4.6, "popularity": 92, "value": 88, "stability": 85, "category": "小吃" },
+        { "name": "阿娘面馆", "address": "黄浦区思南路36号", "lat": 31.2301, "lng": 121.4709, "rating": 4.5, "popularity": 90, "value": 80, "stability": 87, "category": "面馆" },
+        { "name": "鲜得来排骨年糕", "address": "黄浦区云南南路46号", "lat": 31.2362, "lng": 121.4918, "rating": 4.4, "popularity": 84, "value": 86, "stability": 83, "category": "本帮" },
+        { "name": "莱莱小笼", "address": "静安区南京西路街道（近吴江路）", "lat": 31.2171, "lng": 121.4458, "rating": 4.7, "popularity": 88, "value": 79, "stability": 90, "category": "点心" },
+        { "name": "老吉士酒家", "address": "徐汇区天平路41号", "lat": 31.2064, "lng": 121.4382, "rating": 4.5, "popularity": 86, "value": 72, "stability": 89, "category": "本帮" }
       ],
       "plays": [
-        { "name": "外滩", "lat": 31.2401, "lng": 121.4905, "rating": 4.8, "popularity": 98, "value": 95, "stability": 93, "category": "地标" },
-        { "name": "豫园", "lat": 31.2272, "lng": 121.4924, "rating": 4.6, "popularity": 90, "value": 88, "stability": 89, "category": "古典园林" },
-        { "name": "武康路", "lat": 31.2047, "lng": 121.4386, "rating": 4.5, "popularity": 87, "value": 86, "stability": 85, "category": "城市漫步" },
-        { "name": "上海博物馆东馆", "lat": 31.2262, "lng": 121.5443, "rating": 4.7, "popularity": 84, "value": 90, "stability": 91, "category": "博物馆" },
-        { "name": "浦东美术馆", "lat": 31.2388, "lng": 121.5017, "rating": 4.6, "popularity": 82, "value": 83, "stability": 88, "category": "艺术" }
+        { "name": "外滩", "address": "黄浦区中山东一路", "lat": 31.2401, "lng": 121.4905, "rating": 4.8, "popularity": 98, "value": 95, "stability": 93, "category": "地标" },
+        { "name": "豫园", "address": "黄浦区福佑路168号", "lat": 31.2272, "lng": 121.4924, "rating": 4.6, "popularity": 90, "value": 88, "stability": 89, "category": "古典园林" },
+        { "name": "武康路", "address": "徐汇区武康路历史风貌区", "lat": 31.2047, "lng": 121.4386, "rating": 4.5, "popularity": 87, "value": 86, "stability": 85, "category": "城市漫步" },
+        { "name": "上海博物馆东馆", "address": "浦东新区世纪大道1952号", "lat": 31.2262, "lng": 121.5443, "rating": 4.7, "popularity": 84, "value": 90, "stability": 91, "category": "博物馆" },
+        { "name": "浦东美术馆", "address": "浦东新区滨江大道2777号", "lat": 31.2388, "lng": 121.5017, "rating": 4.6, "popularity": 82, "value": 83, "stability": 88, "category": "艺术" }
       ]
     },
     {
       "name": "北京",
       "slug": "beijing",
       "foods": [
-        { "name": "四季民福烤鸭", "lat": 39.9155, "lng": 116.4039, "rating": 4.7, "popularity": 94, "value": 78, "stability": 90, "category": "烤鸭" },
-        { "name": "方砖厂69号炸酱面", "lat": 39.9391, "lng": 116.4017, "rating": 4.5, "popularity": 88, "value": 89, "stability": 86, "category": "面馆" },
-        { "name": "护国寺小吃", "lat": 39.9328, "lng": 116.3784, "rating": 4.4, "popularity": 85, "value": 90, "stability": 82, "category": "小吃" },
-        { "name": "门框胡同百年卤煮", "lat": 39.9051, "lng": 116.3912, "rating": 4.3, "popularity": 81, "value": 88, "stability": 80, "category": "卤煮" },
-        { "name": "尹三豆汁", "lat": 39.8923, "lng": 116.4081, "rating": 4.2, "popularity": 76, "value": 85, "stability": 78, "category": "老北京" }
+        { "name": "四季民福烤鸭", "address": "东城区南池子大街11号", "lat": 39.9155, "lng": 116.4039, "rating": 4.7, "popularity": 94, "value": 78, "stability": 90, "category": "烤鸭" },
+        { "name": "方砖厂69号炸酱面", "address": "东城区方砖厂胡同69号", "lat": 39.9391, "lng": 116.4017, "rating": 4.5, "popularity": 88, "value": 89, "stability": 86, "category": "面馆" },
+        { "name": "护国寺小吃", "address": "西城区护国寺大街93号", "lat": 39.9328, "lng": 116.3784, "rating": 4.4, "popularity": 85, "value": 90, "stability": 82, "category": "小吃" },
+        { "name": "门框胡同百年卤煮", "address": "西城区门框胡同内", "lat": 39.9051, "lng": 116.3912, "rating": 4.3, "popularity": 81, "value": 88, "stability": 80, "category": "卤煮" },
+        { "name": "尹三豆汁", "address": "东城区天坛东里中区", "lat": 39.8923, "lng": 116.4081, "rating": 4.2, "popularity": 76, "value": 85, "stability": 78, "category": "老北京" }
       ],
       "plays": [
-        { "name": "故宫博物院", "lat": 39.9163, "lng": 116.3972, "rating": 4.9, "popularity": 99, "value": 96, "stability": 94, "category": "历史" },
-        { "name": "天坛公园", "lat": 39.8837, "lng": 116.4122, "rating": 4.7, "popularity": 91, "value": 92, "stability": 90, "category": "公园" },
-        { "name": "颐和园", "lat": 39.9997, "lng": 116.2755, "rating": 4.8, "popularity": 93, "value": 91, "stability": 92, "category": "园林" },
-        { "name": "798艺术区", "lat": 39.9841, "lng": 116.4982, "rating": 4.5, "popularity": 84, "value": 86, "stability": 85, "category": "艺术" },
-        { "name": "什刹海", "lat": 39.9433, "lng": 116.3855, "rating": 4.6, "popularity": 88, "value": 87, "stability": 86, "category": "夜游" }
+        { "name": "故宫博物院", "address": "东城区景山前街4号", "lat": 39.9163, "lng": 116.3972, "rating": 4.9, "popularity": 99, "value": 96, "stability": 94, "category": "历史" },
+        { "name": "天坛公园", "address": "东城区天坛东路甲1号", "lat": 39.8837, "lng": 116.4122, "rating": 4.7, "popularity": 91, "value": 92, "stability": 90, "category": "公园" },
+        { "name": "颐和园", "address": "海淀区新建宫门路19号", "lat": 39.9997, "lng": 116.2755, "rating": 4.8, "popularity": 93, "value": 91, "stability": 92, "category": "园林" },
+        { "name": "798艺术区", "address": "朝阳区酒仙桥路4号", "lat": 39.9841, "lng": 116.4982, "rating": 4.5, "popularity": 84, "value": 86, "stability": 85, "category": "艺术" },
+        { "name": "什刹海", "address": "西城区地安门西大街", "lat": 39.9433, "lng": 116.3855, "rating": 4.6, "popularity": 88, "value": 87, "stability": 86, "category": "夜游" }
       ]
     }
   ]
