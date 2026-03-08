@@ -45,19 +45,39 @@ button.active {
   background: #4a67c8;
 }
 
+.small-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
 .search-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
-input {
+input,
+select {
   width: 100%;
   background: #0f1730;
   border: 1px solid #2f427f;
   color: #fff;
   border-radius: 8px;
   padding: 10px 12px;
+}
+
+.filters-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.route-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .grid {
@@ -76,7 +96,14 @@ a {
 
 @media (max-width: 760px) {
   .grid,
-  .search-row {
+  .search-row,
+  .filters-row {
     grid-template-columns: 1fr;
+  }
+
+  .route-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }
