@@ -1,0 +1,12 @@
+{
+  "name": "cityfunrank",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.mjs",
+    "serve": "node scripts/serve.mjs",
+    "build": "npm run generate",
+    "start": "npm run serve"
+  }
+}
