@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T04:21:21.572Z",
+  "generatedAt": "2026-03-08T04:32:42.689Z",
   "algorithm": "v1: rating(50%) + popularity(25%) + stability(15%) + value(10%)",
   "cities": [
     {
@@ -1187,6 +1187,204 @@
           "address": "青羊区青华路37号",
           "lat": 30.662,
           "lng": 104.0324
+        }
+      ]
+    },
+    {
+      "name": "重庆",
+      "slug": "chongqing",
+      "topFoods": [
+        {
+          "name": "珮姐老火锅",
+          "address": "渝中区解放碑八一路",
+          "lat": 29.5582,
+          "lng": 106.5752,
+          "rating": 4.7,
+          "popularity": 95,
+          "value": 84,
+          "stability": 89,
+          "category": "火锅",
+          "sceneTags": [
+            "date",
+            "first"
+          ],
+          "score": 92.5
+        },
+        {
+          "name": "杨记隆府",
+          "address": "渝中区临江路32号",
+          "lat": 29.5603,
+          "lng": 106.5757,
+          "rating": 4.6,
+          "popularity": 90,
+          "value": 82,
+          "stability": 88,
+          "category": "江湖菜",
+          "sceneTags": [
+            "family",
+            "date"
+          ],
+          "score": 89.9
+        },
+        {
+          "name": "花市豌杂面",
+          "address": "渝中区较场口",
+          "lat": 29.5571,
+          "lng": 106.5715,
+          "rating": 4.5,
+          "popularity": 88,
+          "value": 91,
+          "stability": 85,
+          "category": "面馆",
+          "sceneTags": [
+            "solo",
+            "first"
+          ],
+          "score": 88.85
+        },
+        {
+          "name": "白乐天毛血旺",
+          "address": "渝中区中山四路",
+          "lat": 29.5684,
+          "lng": 106.5516,
+          "rating": 4.4,
+          "popularity": 84,
+          "value": 87,
+          "stability": 84,
+          "category": "川渝菜",
+          "sceneTags": [
+            "family",
+            "first"
+          ],
+          "score": 86.3
+        },
+        {
+          "name": "山城二十二川菜馆",
+          "address": "南岸区南滨路",
+          "lat": 29.5278,
+          "lng": 106.5881,
+          "rating": 4.3,
+          "popularity": 82,
+          "value": 85,
+          "stability": 83,
+          "category": "川菜",
+          "sceneTags": [
+            "date",
+            "solo"
+          ],
+          "score": 84.45
+        }
+      ],
+      "topPlays": [
+        {
+          "name": "洪崖洞",
+          "address": "渝中区嘉陵江滨江路88号",
+          "lat": 29.5646,
+          "lng": 106.5792,
+          "rating": 4.8,
+          "popularity": 98,
+          "value": 90,
+          "stability": 92,
+          "category": "夜景地标",
+          "sceneTags": [
+            "date",
+            "first"
+          ],
+          "score": 95.3
+        },
+        {
+          "name": "李子坝轻轨观景平台",
+          "address": "渝中区李子坝正街39号",
+          "lat": 29.5568,
+          "lng": 106.5346,
+          "rating": 4.6,
+          "popularity": 91,
+          "value": 94,
+          "stability": 89,
+          "category": "城市奇观",
+          "sceneTags": [
+            "first",
+            "solo"
+          ],
+          "score": 91.5
+        },
+        {
+          "name": "南山一棵树观景台",
+          "address": "南岸区龙黄公路",
+          "lat": 29.5412,
+          "lng": 106.5867,
+          "rating": 4.7,
+          "popularity": 87,
+          "value": 89,
+          "stability": 88,
+          "category": "观景台",
+          "sceneTags": [
+            "date",
+            "solo"
+          ],
+          "score": 90.85
+        },
+        {
+          "name": "长江索道",
+          "address": "渝中区新华路151号",
+          "lat": 29.556,
+          "lng": 106.5827,
+          "rating": 4.5,
+          "popularity": 89,
+          "value": 86,
+          "stability": 87,
+          "category": "交通体验",
+          "sceneTags": [
+            "date",
+            "first"
+          ],
+          "score": 88.9
+        },
+        {
+          "name": "磁器口古镇",
+          "address": "沙坪坝区磁南街1号",
+          "lat": 29.5815,
+          "lng": 106.4558,
+          "rating": 4.4,
+          "popularity": 86,
+          "value": 88,
+          "stability": 85,
+          "category": "历史街区",
+          "sceneTags": [
+            "family",
+            "first"
+          ],
+          "score": 87.05
+        }
+      ],
+      "route": [
+        {
+          "type": "eat",
+          "name": "珮姐老火锅",
+          "address": "渝中区解放碑八一路",
+          "lat": 29.5582,
+          "lng": 106.5752
+        },
+        {
+          "type": "play",
+          "name": "洪崖洞",
+          "address": "渝中区嘉陵江滨江路88号",
+          "lat": 29.5646,
+          "lng": 106.5792
+        },
+        {
+          "type": "eat",
+          "name": "杨记隆府",
+          "address": "渝中区临江路32号",
+          "lat": 29.5603,
+          "lng": 106.5757
+        },
+        {
+          "type": "play",
+          "name": "李子坝轻轨观景平台",
+          "address": "渝中区李子坝正街39号",
+          "lat": 29.5568,
+          "lng": 106.5346
         }
       ]
     }
