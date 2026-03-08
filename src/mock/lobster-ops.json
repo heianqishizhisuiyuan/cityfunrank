@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-03-08T04:00:00.000Z",
+  "squadName": "CityFunRank 龙虾行动队",
+  "activeCount": 2,
+  "lobsters": [
+    {
+      "id": "lob-001",
+      "name": "赤焰",
+      "status": "running",
+      "currentTask": "抓取上海本周新店热度",
+      "progress": 62,
+      "updatedAt": "2026-03-08T04:00:00.000Z",
+      "timeline": [
+        { "time": "03:32", "label": "任务派发：上海新店热度", "type": "info" },
+        { "time": "03:45", "label": "完成首轮样本清洗", "type": "success" },
+        { "time": "03:56", "label": "进入二次抽样", "type": "info" }
+      ]
+    },
+    {
+      "id": "lob-002",
+      "name": "蓝锤",
+      "status": "idle",
+      "currentTask": "等待任务",
+      "progress": 0,
+      "updatedAt": "2026-03-08T03:58:00.000Z",
+      "timeline": [
+        { "time": "03:20", "label": "完成深圳路线校验", "type": "success" },
+        { "time": "03:58", "label": "进入待机队列", "type": "info" }
+      ]
+    },
+    {
+      "id": "lob-003",
+      "name": "银爪",
+      "status": "done",
+      "currentTask": "广州亲子场景打分归档",
+      "progress": 100,
+      "updatedAt": "2026-03-08T03:52:00.000Z",
+      "timeline": [
+        { "time": "03:18", "label": "接收广州亲子场景任务", "type": "info" },
+        { "time": "03:41", "label": "完成模型复核", "type": "success" },
+        { "time": "03:52", "label": "结果归档完成", "type": "success" }
+      ]
+    },
+    {
+      "id": "lob-004",
+      "name": "灰钳",
+      "status": "error",
+      "currentTask": "杭州夜游榜单增量失败重试中",
+      "progress": 36,
+      "updatedAt": "2026-03-08T03:59:00.000Z",
+      "timeline": [
+        { "time": "03:27", "label": "接收杭州夜游榜任务", "type": "info" },
+        { "time": "03:49", "label": "网络波动触发重试", "type": "warning" },
+        { "time": "03:59", "label": "第 2 次重试失败", "type": "error" }
+      ]
+    }
+  ]
+}

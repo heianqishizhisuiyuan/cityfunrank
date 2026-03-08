@@ -39,6 +39,7 @@ button {
   border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
+  transition: background-color 0.25s ease;
 }
 
 button.active {
@@ -49,6 +50,12 @@ button.active {
   padding: 6px 10px;
   border-radius: 6px;
   font-size: 12px;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
 }
 
 .search-row {
@@ -80,7 +87,8 @@ select {
   align-items: center;
 }
 
-.grid {
+.grid,
+.ops-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
@@ -90,18 +98,153 @@ li {
   margin: 8px 0;
 }
 
+.empty-state {
+  border-style: dashed;
+}
+
+.empty-state h3 {
+  margin-top: 0;
+}
+
 a {
   color: #8bb0ff;
 }
 
+.ops-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.ops-active {
+  font-size: 24px;
+  font-weight: 700;
+  color: #8fe1ff;
+}
+
+.lobster-card {
+  transition: border-color 0.35s ease, transform 0.35s ease;
+}
+
+.lobster-card:hover {
+  border-color: #4e6bd8;
+  transform: translateY(-2px);
+}
+
+.lobster-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.lobster-head h3 {
+  margin: 0;
+}
+
+.status-badge {
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.status-idle {
+  background: #3b466b;
+  color: #dce4ff;
+}
+
+.status-running {
+  background: #215274;
+  color: #8fe1ff;
+}
+
+.status-done {
+  background: #214f34;
+  color: #95f3b0;
+}
+
+.status-error {
+  background: #64303a;
+  color: #ffb2bd;
+}
+
+.progress-wrap {
+  margin-top: 12px;
+}
+
+.progress-text {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  background: #0f1730;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #29375f;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 0.55s ease, background-color 0.35s ease;
+}
+
+.timeline {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 10px 44px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.timeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background-color 0.35s ease;
+}
+
+.dot-info {
+  background: #76a7ff;
+}
+
+.dot-success {
+  background: #79e69d;
+}
+
+.dot-warning {
+  background: #ffd17a;
+}
+
+.dot-error {
+  background: #ff8f9f;
+}
+
+.timeline-time {
+  color: #91a4d9;
+  font-size: 12px;
+}
+
 @media (max-width: 760px) {
   .grid,
+  .ops-grid,
   .search-row,
   .filters-row {
     grid-template-columns: 1fr;
   }
 
-  .route-head {
+  .route-head,
+  .ops-summary {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;

@@ -4,36 +4,108 @@
       "name": "上海",
       "slug": "shanghai",
       "foods": [
-        { "name": "大壶春生煎", "address": "黄浦区四川中路136号", "lat": 31.2243, "lng": 121.4768, "rating": 4.6, "popularity": 92, "value": 88, "stability": 85, "category": "小吃" },
-        { "name": "阿娘面馆", "address": "黄浦区思南路36号", "lat": 31.2301, "lng": 121.4709, "rating": 4.5, "popularity": 90, "value": 80, "stability": 87, "category": "面馆" },
-        { "name": "鲜得来排骨年糕", "address": "黄浦区云南南路46号", "lat": 31.2362, "lng": 121.4918, "rating": 4.4, "popularity": 84, "value": 86, "stability": 83, "category": "本帮" },
-        { "name": "莱莱小笼", "address": "静安区南京西路街道（近吴江路）", "lat": 31.2171, "lng": 121.4458, "rating": 4.7, "popularity": 88, "value": 79, "stability": 90, "category": "点心" },
-        { "name": "老吉士酒家", "address": "徐汇区天平路41号", "lat": 31.2064, "lng": 121.4382, "rating": 4.5, "popularity": 86, "value": 72, "stability": 89, "category": "本帮" }
+        { "name": "大壶春生煎", "address": "黄浦区四川中路136号", "lat": 31.2243, "lng": 121.4768, "rating": 4.6, "popularity": 92, "value": 88, "stability": 85, "category": "小吃", "sceneTags": ["solo", "first"] },
+        { "name": "阿娘面馆", "address": "黄浦区思南路36号", "lat": 31.2301, "lng": 121.4709, "rating": 4.5, "popularity": 90, "value": 80, "stability": 87, "category": "面馆", "sceneTags": ["solo", "first"] },
+        { "name": "鲜得来排骨年糕", "address": "黄浦区云南南路46号", "lat": 31.2362, "lng": 121.4918, "rating": 4.4, "popularity": 84, "value": 86, "stability": 83, "category": "本帮", "sceneTags": ["family", "first"] },
+        { "name": "莱莱小笼", "address": "静安区南京西路街道（近吴江路）", "lat": 31.2171, "lng": 121.4458, "rating": 4.7, "popularity": 88, "value": 79, "stability": 90, "category": "点心", "sceneTags": ["date", "first"] },
+        { "name": "老吉士酒家", "address": "徐汇区天平路41号", "lat": 31.2064, "lng": 121.4382, "rating": 4.5, "popularity": 86, "value": 72, "stability": 89, "category": "本帮", "sceneTags": ["date", "family"] }
       ],
       "plays": [
-        { "name": "外滩", "address": "黄浦区中山东一路", "lat": 31.2401, "lng": 121.4905, "rating": 4.8, "popularity": 98, "value": 95, "stability": 93, "category": "地标" },
-        { "name": "豫园", "address": "黄浦区福佑路168号", "lat": 31.2272, "lng": 121.4924, "rating": 4.6, "popularity": 90, "value": 88, "stability": 89, "category": "古典园林" },
-        { "name": "武康路", "address": "徐汇区武康路历史风貌区", "lat": 31.2047, "lng": 121.4386, "rating": 4.5, "popularity": 87, "value": 86, "stability": 85, "category": "城市漫步" },
-        { "name": "上海博物馆东馆", "address": "浦东新区世纪大道1952号", "lat": 31.2262, "lng": 121.5443, "rating": 4.7, "popularity": 84, "value": 90, "stability": 91, "category": "博物馆" },
-        { "name": "浦东美术馆", "address": "浦东新区滨江大道2777号", "lat": 31.2388, "lng": 121.5017, "rating": 4.6, "popularity": 82, "value": 83, "stability": 88, "category": "艺术" }
+        { "name": "外滩", "address": "黄浦区中山东一路", "lat": 31.2401, "lng": 121.4905, "rating": 4.8, "popularity": 98, "value": 95, "stability": 93, "category": "地标", "sceneTags": ["date", "first"] },
+        { "name": "豫园", "address": "黄浦区福佑路168号", "lat": 31.2272, "lng": 121.4924, "rating": 4.6, "popularity": 90, "value": 88, "stability": 89, "category": "古典园林", "sceneTags": ["family", "first"] },
+        { "name": "武康路", "address": "徐汇区武康路历史风貌区", "lat": 31.2047, "lng": 121.4386, "rating": 4.5, "popularity": 87, "value": 86, "stability": 85, "category": "城市漫步", "sceneTags": ["date", "solo"] },
+        { "name": "上海博物馆东馆", "address": "浦东新区世纪大道1952号", "lat": 31.2262, "lng": 121.5443, "rating": 4.7, "popularity": 84, "value": 90, "stability": 91, "category": "博物馆", "sceneTags": ["family", "solo"] },
+        { "name": "浦东美术馆", "address": "浦东新区滨江大道2777号", "lat": 31.2388, "lng": 121.5017, "rating": 4.6, "popularity": 82, "value": 83, "stability": 88, "category": "艺术", "sceneTags": ["date", "solo"] }
       ]
     },
     {
       "name": "北京",
       "slug": "beijing",
       "foods": [
-        { "name": "四季民福烤鸭", "address": "东城区南池子大街11号", "lat": 39.9155, "lng": 116.4039, "rating": 4.7, "popularity": 94, "value": 78, "stability": 90, "category": "烤鸭" },
-        { "name": "方砖厂69号炸酱面", "address": "东城区方砖厂胡同69号", "lat": 39.9391, "lng": 116.4017, "rating": 4.5, "popularity": 88, "value": 89, "stability": 86, "category": "面馆" },
-        { "name": "护国寺小吃", "address": "西城区护国寺大街93号", "lat": 39.9328, "lng": 116.3784, "rating": 4.4, "popularity": 85, "value": 90, "stability": 82, "category": "小吃" },
-        { "name": "门框胡同百年卤煮", "address": "西城区门框胡同内", "lat": 39.9051, "lng": 116.3912, "rating": 4.3, "popularity": 81, "value": 88, "stability": 80, "category": "卤煮" },
-        { "name": "尹三豆汁", "address": "东城区天坛东里中区", "lat": 39.8923, "lng": 116.4081, "rating": 4.2, "popularity": 76, "value": 85, "stability": 78, "category": "老北京" }
+        { "name": "四季民福烤鸭", "address": "东城区南池子大街11号", "lat": 39.9155, "lng": 116.4039, "rating": 4.7, "popularity": 94, "value": 78, "stability": 90, "category": "烤鸭", "sceneTags": ["date", "first"] },
+        { "name": "方砖厂69号炸酱面", "address": "东城区方砖厂胡同69号", "lat": 39.9391, "lng": 116.4017, "rating": 4.5, "popularity": 88, "value": 89, "stability": 86, "category": "面馆", "sceneTags": ["solo", "first"] },
+        { "name": "护国寺小吃", "address": "西城区护国寺大街93号", "lat": 39.9328, "lng": 116.3784, "rating": 4.4, "popularity": 85, "value": 90, "stability": 82, "category": "小吃", "sceneTags": ["family", "first"] },
+        { "name": "门框胡同百年卤煮", "address": "西城区门框胡同内", "lat": 39.9051, "lng": 116.3912, "rating": 4.3, "popularity": 81, "value": 88, "stability": 80, "category": "卤煮", "sceneTags": ["solo", "first"] },
+        { "name": "尹三豆汁", "address": "东城区天坛东里中区", "lat": 39.8923, "lng": 116.4081, "rating": 4.2, "popularity": 76, "value": 85, "stability": 78, "category": "老北京", "sceneTags": ["solo", "first"] }
       ],
       "plays": [
-        { "name": "故宫博物院", "address": "东城区景山前街4号", "lat": 39.9163, "lng": 116.3972, "rating": 4.9, "popularity": 99, "value": 96, "stability": 94, "category": "历史" },
-        { "name": "天坛公园", "address": "东城区天坛东路甲1号", "lat": 39.8837, "lng": 116.4122, "rating": 4.7, "popularity": 91, "value": 92, "stability": 90, "category": "公园" },
-        { "name": "颐和园", "address": "海淀区新建宫门路19号", "lat": 39.9997, "lng": 116.2755, "rating": 4.8, "popularity": 93, "value": 91, "stability": 92, "category": "园林" },
-        { "name": "798艺术区", "address": "朝阳区酒仙桥路4号", "lat": 39.9841, "lng": 116.4982, "rating": 4.5, "popularity": 84, "value": 86, "stability": 85, "category": "艺术" },
-        { "name": "什刹海", "address": "西城区地安门西大街", "lat": 39.9433, "lng": 116.3855, "rating": 4.6, "popularity": 88, "value": 87, "stability": 86, "category": "夜游" }
+        { "name": "故宫博物院", "address": "东城区景山前街4号", "lat": 39.9163, "lng": 116.3972, "rating": 4.9, "popularity": 99, "value": 96, "stability": 94, "category": "历史", "sceneTags": ["family", "first"] },
+        { "name": "天坛公园", "address": "东城区天坛东路甲1号", "lat": 39.8837, "lng": 116.4122, "rating": 4.7, "popularity": 91, "value": 92, "stability": 90, "category": "公园", "sceneTags": ["family", "solo"] },
+        { "name": "颐和园", "address": "海淀区新建宫门路19号", "lat": 39.9997, "lng": 116.2755, "rating": 4.8, "popularity": 93, "value": 91, "stability": 92, "category": "园林", "sceneTags": ["date", "family"] },
+        { "name": "798艺术区", "address": "朝阳区酒仙桥路4号", "lat": 39.9841, "lng": 116.4982, "rating": 4.5, "popularity": 84, "value": 86, "stability": 85, "category": "艺术", "sceneTags": ["date", "solo"] },
+        { "name": "什刹海", "address": "西城区地安门西大街", "lat": 39.9433, "lng": 116.3855, "rating": 4.6, "popularity": 88, "value": 87, "stability": 86, "category": "夜游", "sceneTags": ["date", "first"] }
+      ]
+    },
+    {
+      "name": "广州",
+      "slug": "guangzhou",
+      "foods": [
+        { "name": "点都德（大茶楼）", "address": "越秀区中山五路219号", "lat": 23.1291, "lng": 113.2644, "rating": 4.6, "popularity": 93, "value": 86, "stability": 88, "category": "粤式早茶", "sceneTags": ["family", "first"] },
+        { "name": "银记肠粉店", "address": "荔湾区上九路79号", "lat": 23.1172, "lng": 113.2448, "rating": 4.5, "popularity": 87, "value": 91, "stability": 84, "category": "小吃", "sceneTags": ["solo", "first"] },
+        { "name": "炳胜品味", "address": "天河区冼村路2号", "lat": 23.1246, "lng": 113.3247, "rating": 4.7, "popularity": 88, "value": 76, "stability": 89, "category": "粤菜", "sceneTags": ["date", "family"] },
+        { "name": "陈添记鱼皮", "address": "荔湾区宝华路十五甫三巷2号", "lat": 23.1164, "lng": 113.2432, "rating": 4.4, "popularity": 82, "value": 90, "stability": 82, "category": "小吃", "sceneTags": ["solo", "first"] },
+        { "name": "南信牛奶甜品专家", "address": "荔湾区第十甫路47号", "lat": 23.1149, "lng": 113.2418, "rating": 4.3, "popularity": 80, "value": 89, "stability": 83, "category": "甜品", "sceneTags": ["date", "family"] }
+      ],
+      "plays": [
+        { "name": "广州塔", "address": "海珠区阅江西路222号", "lat": 23.1085, "lng": 113.3195, "rating": 4.8, "popularity": 97, "value": 86, "stability": 92, "category": "地标", "sceneTags": ["date", "first"] },
+        { "name": "陈家祠", "address": "荔湾区恩龙里34号", "lat": 23.1257, "lng": 113.2396, "rating": 4.6, "popularity": 89, "value": 90, "stability": 90, "category": "文化古建", "sceneTags": ["family", "first"] },
+        { "name": "沙面", "address": "荔湾区沙面南街", "lat": 23.1082, "lng": 113.2385, "rating": 4.5, "popularity": 85, "value": 88, "stability": 87, "category": "城市漫步", "sceneTags": ["date", "solo"] },
+        { "name": "广东省博物馆", "address": "天河区珠江东路2号", "lat": 23.1186, "lng": 113.3244, "rating": 4.7, "popularity": 86, "value": 92, "stability": 91, "category": "博物馆", "sceneTags": ["family", "solo"] },
+        { "name": "永庆坊", "address": "荔湾区恩宁路99号", "lat": 23.1167, "lng": 113.2409, "rating": 4.4, "popularity": 83, "value": 87, "stability": 85, "category": "老城街区", "sceneTags": ["date", "first"] }
+      ]
+    },
+    {
+      "name": "深圳",
+      "slug": "shenzhen",
+      "foods": [
+        { "name": "润园四季椰子鸡", "address": "福田区福华一路3号", "lat": 22.5351, "lng": 114.0546, "rating": 4.6, "popularity": 90, "value": 84, "stability": 87, "category": "椰子鸡", "sceneTags": ["family", "date"] },
+        { "name": "八合里牛肉火锅", "address": "南山区海岸城东座", "lat": 22.5179, "lng": 113.9304, "rating": 4.5, "popularity": 91, "value": 82, "stability": 86, "category": "火锅", "sceneTags": ["date", "first"] },
+        { "name": "胜记猪肚鸡", "address": "罗湖区深南东路3020号", "lat": 22.5401, "lng": 114.1158, "rating": 4.4, "popularity": 84, "value": 88, "stability": 84, "category": "粤菜", "sceneTags": ["family", "solo"] },
+        { "name": "潮汕牛肉店（华强北）", "address": "福田区华强北路2001号", "lat": 22.5469, "lng": 114.0866, "rating": 4.3, "popularity": 82, "value": 89, "stability": 82, "category": "牛肉火锅", "sceneTags": ["solo", "first"] },
+        { "name": "喜茶LAB（万象天地）", "address": "南山区深南大道9668号", "lat": 22.5306, "lng": 113.9448, "rating": 4.2, "popularity": 88, "value": 80, "stability": 81, "category": "茶饮", "sceneTags": ["date", "solo"] }
+      ],
+      "plays": [
+        { "name": "深圳湾公园", "address": "南山区滨海大道", "lat": 22.5067, "lng": 113.9388, "rating": 4.8, "popularity": 95, "value": 94, "stability": 92, "category": "滨海公园", "sceneTags": ["date", "solo"] },
+        { "name": "华侨城创意文化园", "address": "南山区锦绣北街2号", "lat": 22.5442, "lng": 113.9731, "rating": 4.6, "popularity": 87, "value": 88, "stability": 89, "category": "艺术园区", "sceneTags": ["date", "solo"] },
+        { "name": "深圳博物馆", "address": "福田区福中路市民中心A区", "lat": 22.5431, "lng": 114.0587, "rating": 4.5, "popularity": 83, "value": 91, "stability": 90, "category": "博物馆", "sceneTags": ["family", "first"] },
+        { "name": "欢乐港湾摩天轮", "address": "宝安区海天路", "lat": 22.5471, "lng": 113.8848, "rating": 4.7, "popularity": 89, "value": 82, "stability": 88, "category": "主题体验", "sceneTags": ["date", "first"] },
+        { "name": "莲花山公园", "address": "福田区红荔路6030号", "lat": 22.5488, "lng": 114.0533, "rating": 4.4, "popularity": 81, "value": 93, "stability": 87, "category": "城市公园", "sceneTags": ["family", "solo"] }
+      ]
+    },
+    {
+      "name": "杭州",
+      "slug": "hangzhou",
+      "foods": [
+        { "name": "楼外楼", "address": "西湖区孤山路30号", "lat": 30.2534, "lng": 120.1393, "rating": 4.5, "popularity": 90, "value": 78, "stability": 88, "category": "杭帮菜", "sceneTags": ["date", "first"] },
+        { "name": "知味观（湖滨总店）", "address": "上城区仁和路83号", "lat": 30.2578, "lng": 120.1674, "rating": 4.4, "popularity": 88, "value": 86, "stability": 86, "category": "小吃", "sceneTags": ["family", "first"] },
+        { "name": "新白鹿餐厅", "address": "拱墅区延安路385号", "lat": 30.2741, "lng": 120.1521, "rating": 4.3, "popularity": 85, "value": 90, "stability": 84, "category": "杭帮菜", "sceneTags": ["family", "solo"] },
+        { "name": "奎元馆", "address": "上城区解放路154号", "lat": 30.2519, "lng": 120.1741, "rating": 4.4, "popularity": 83, "value": 88, "stability": 85, "category": "面馆", "sceneTags": ["solo", "first"] },
+        { "name": "方老大面", "address": "西湖区文二路391号", "lat": 30.2864, "lng": 120.1233, "rating": 4.2, "popularity": 80, "value": 89, "stability": 82, "category": "面馆", "sceneTags": ["solo", "family"] }
+      ],
+      "plays": [
+        { "name": "西湖", "address": "西湖区龙井路1号", "lat": 30.2431, "lng": 120.1501, "rating": 4.9, "popularity": 98, "value": 96, "stability": 94, "category": "自然地标", "sceneTags": ["date", "first"] },
+        { "name": "灵隐寺", "address": "西湖区灵隐路法云弄1号", "lat": 30.2422, "lng": 120.1038, "rating": 4.7, "popularity": 92, "value": 89, "stability": 91, "category": "人文古迹", "sceneTags": ["family", "first"] },
+        { "name": "中国茶叶博物馆", "address": "西湖区龙井路双峰村", "lat": 30.2273, "lng": 120.1179, "rating": 4.5, "popularity": 82, "value": 90, "stability": 89, "category": "博物馆", "sceneTags": ["family", "solo"] },
+        { "name": "河坊街", "address": "上城区河坊街", "lat": 30.2458, "lng": 120.1734, "rating": 4.4, "popularity": 86, "value": 87, "stability": 85, "category": "历史街区", "sceneTags": ["first", "family"] },
+        { "name": "湘湖", "address": "萧山区湘湖路", "lat": 30.1567, "lng": 120.2685, "rating": 4.6, "popularity": 80, "value": 92, "stability": 88, "category": "湖景公园", "sceneTags": ["date", "solo"] }
+      ]
+    },
+    {
+      "name": "成都",
+      "slug": "chengdu",
+      "foods": [
+        { "name": "小龙坎老火锅", "address": "青羊区同仁路2号", "lat": 30.6677, "lng": 104.0543, "rating": 4.6, "popularity": 93, "value": 84, "stability": 88, "category": "火锅", "sceneTags": ["date", "family"] },
+        { "name": "陈麻婆豆腐", "address": "青羊区青华路10号", "lat": 30.6625, "lng": 104.0409, "rating": 4.5, "popularity": 89, "value": 86, "stability": 87, "category": "川菜", "sceneTags": ["first", "family"] },
+        { "name": "洞子口张老二凉粉", "address": "金牛区解放路二段45号", "lat": 30.6953, "lng": 104.0812, "rating": 4.4, "popularity": 85, "value": 90, "stability": 84, "category": "小吃", "sceneTags": ["solo", "first"] },
+        { "name": "赖汤圆", "address": "锦江区总府路27号", "lat": 30.6599, "lng": 104.0786, "rating": 4.3, "popularity": 82, "value": 89, "stability": 83, "category": "甜品小吃", "sceneTags": ["family", "first"] },
+        { "name": "马旺子·川小馆", "address": "武侯区天府大道北段1700号", "lat": 30.5702, "lng": 104.0658, "rating": 4.5, "popularity": 84, "value": 82, "stability": 86, "category": "川菜", "sceneTags": ["date", "solo"] }
+      ],
+      "plays": [
+        { "name": "成都大熊猫繁育研究基地", "address": "成华区熊猫大道1375号", "lat": 30.7398, "lng": 104.1521, "rating": 4.9, "popularity": 99, "value": 93, "stability": 94, "category": "亲子必去", "sceneTags": ["family", "first"] },
+        { "name": "宽窄巷子", "address": "青羊区宽巷子27号", "lat": 30.6682, "lng": 104.0552, "rating": 4.6, "popularity": 91, "value": 88, "stability": 89, "category": "历史街区", "sceneTags": ["date", "first"] },
+        { "name": "杜甫草堂", "address": "青羊区青华路37号", "lat": 30.662, "lng": 104.0324, "rating": 4.7, "popularity": 87, "value": 90, "stability": 91, "category": "文化古迹", "sceneTags": ["solo", "family"] },
+        { "name": "成都博物馆", "address": "青羊区小河街1号", "lat": 30.6588, "lng": 104.0635, "rating": 4.5, "popularity": 84, "value": 92, "stability": 90, "category": "博物馆", "sceneTags": ["family", "solo"] },
+        { "name": "锦里古街", "address": "武侯区武侯祠大街231号", "lat": 30.6461, "lng": 104.0492, "rating": 4.4, "popularity": 86, "value": 87, "stability": 85, "category": "夜游街区", "sceneTags": ["date", "first"] }
       ]
     }
   ]
