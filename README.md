@@ -1,48 +1,52 @@
 # CityFunRank
 
-一个可长期自进化的城市生活工具网站：输入城市，获得「好吃榜 / 好玩榜 / 具体位置 / 推荐路线」。
+城市生活探索引擎（Vue3 + TypeScript）：输入城市，获得「好吃榜 / 好玩榜 / 具体位置 / 推荐路线」。
 
-## 亮点
+## 当前能力
 
-- 🔎 城市搜索（当前内置：上海、北京）
+- 🔎 城市切换（当前内置：上海、北京）
 - 🍜 好吃榜（综合评分、热度、人均、稳定性）
-- 🎡 好玩榜（景点/体验项目综合排序）
-- 🗺️ 路线建议（半日/一日）
-- ♻️ 自动更新（GitHub Actions 每日刷新榜单）
-- 📈 可商业化扩展（广告位、会员路线包、城市 API）
+- 🎡 好玩榜（景点/体验综合排序）
+- 🗺️ 推荐路线（半日）
+- ♻️ 每日自动重算（GitHub Actions）
+- ✅ CI 自检（Typecheck + Unit Test + Build）
+- 🚀 GitHub Pages 自动部署
 
-## 快速开始
+## 技术栈
+
+- Frontend: Vue 3 + TypeScript + Vite
+- Data: JSON（后续接入真实 POI/API）
+- Test: Vitest
+- CI/CD: GitHub Actions
+
+## 本地开发
 
 ```bash
 npm install
-npm run generate
-npm run serve
+npm run dev
 ```
 
-打开 `http://localhost:4173`。
+## 质量门禁
 
-## 数据与进化机制（MVP）
+```bash
+npm run ci
+```
 
-当前版本采用“规则 + 权重”排序：
+包含：
 
-- `综合分 = 基础评分*0.5 + 热度*0.25 + 口碑稳定性*0.15 + 性价比*0.10`
-- 支持每日自动重算，后续可接入真实用户行为（点击、收藏、完成路线）
-- 路线按“地理邻近 + 类别多样性 + 时段适配”生成
+1. `vue-tsc --noEmit`
+2. `vitest run`
+3. `npm run build`
 
-## 自动化
+## 自动化任务
 
-- 工作流：`.github/workflows/daily-refresh.yml`
-- 每天 UTC 01:00 自动执行：
-  1. 重新生成榜单与路线
-  2. 如有变化自动提交回仓库
+- `ci.yml`：每次 push/PR 自动检查质量
+- `pages.yml`：main 分支自动部署到 GitHub Pages
+- `daily-refresh.yml`：每天 UTC 01:00 自动重算榜单并自动提交（如有变化）
 
-## 后续规划
+## 路线图
 
-1. 接入真实地图 POI API（高德/Mapbox/Google Places）
-2. 接入用户行为学习（个性化推荐）
-3. 城市扩展到 50+
-4. 会员版路线（亲子/约会/夜生活）
-5. 商家后台（曝光与转化分析）
+详见 `docs/ROADMAP.md`。
 
 ## License
 
