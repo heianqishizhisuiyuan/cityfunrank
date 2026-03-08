@@ -1,16 +1,8 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import rankingRaw from '../data/generated/rankings.json';
 import lobsterOpsRaw from './mock/lobster-ops.json';
-import type {
-  CityRanking,
-  LobsterAgent,
-  LobsterOpsBoard,
-  LobsterStatus,
-  Place,
-  RankingData,
-  SceneTag
-} from './types';
+import type { CityRanking, LobsterOpsBoard, LobsterStatus, Place, RankingData, SceneTag } from './types';
 
 const ranking = rankingRaw as RankingData;
 const opsSeed = lobsterOpsRaw as LobsterOpsBoard;
@@ -32,82 +24,92 @@ const sceneOptions: Array<{ label: string; value: 'all' | SceneTag }> = [
   { label: '游客首访', value: 'first' }
 ];
 
-const opsBoard = ref<LobsterOpsBoard>({
-  ...opsSeed,
-  lobsters: opsSeed.lobsters.map((lob) => ({ ...lob, timeline: [...lob.timeline] }))
-});
-
-function updateActiveCount(list: LobsterAgent[]) {
-  return list.filter((lob) => lob.status === 'running').length;
-}
-
-let timer: ReturnType<typeof setInterval> | null = null;
-
-function tickOpsBoard() {
-  const current = opsBoard.value;
-  const nextLobsters = current.lobsters.map((lob) => {
-    const next = { ...lob, timeline: [...lob.timeline] };
-
-    if (lob.status === 'running') {
-      const gain = Math.floor(Math.random() * 10) + 3;
-      const progress = Math.min(100, lob.progress + gain);
-      next.progress = progress;
-      if (progress >= 100) {
-        next.status = 'done';
-        next.currentTask = '任务完成，等待归档';
-        next.timeline = [...next.timeline, { time: nowHHmm(), label: '任务执行完成', type: 'success' as const }].slice(-4);
-      }
-      next.updatedAt = new Date().toISOString();
-      return next;
-    }
-
-    if (lob.status === 'idle' && Math.random() > 0.75) {
-      next.status = 'running';
-      next.progress = Math.max(5, lob.progress);
-      next.currentTask = `执行增量任务 #${Math.floor(Math.random() * 90) + 10}`;
-      next.updatedAt = new Date().toISOString();
-      next.timeline = [...next.timeline, { time: nowHHmm(), label: '收到新任务并开始执行', type: 'info' as const }].slice(-4);
-      return next;
-    }
-
-    if (lob.status === 'error' && Math.random() > 0.55) {
-      next.status = 'running';
-      next.currentTask = '异常恢复后继续执行';
-      next.progress = Math.min(92, lob.progress + 12);
-      next.updatedAt = new Date().toISOString();
-      next.timeline = [...next.timeline, { time: nowHHmm(), label: '重试成功，恢复执行', type: 'success' as const }].slice(-4);
-      return next;
-    }
-
-    return next;
-  });
-
-  if (Math.random() > 0.88) {
-    const pick = nextLobsters.find((lob) => lob.status === 'running');
-    if (pick) {
-      pick.status = 'error';
-      pick.currentTask = '出现异常，待重试';
-      pick.updatedAt = new Date().toISOString();
-      pick.timeline = [...pick.timeline, { time: nowHHmm(), label: '服务抖动，任务中断', type: 'error' as const }].slice(-4);
-    }
-  }
-
-  opsBoard.value = {
-    ...current,
-    generatedAt: new Date().toISOString(),
-    activeCount: updateActiveCount(nextLobsters),
-    lobsters: nextLobsters
+function cloneBoard(board: LobsterOpsBoard): LobsterOpsBoard {
+  return {
+    ...board,
+    lobsters: board.lobsters.map((lob) => ({ ...lob, timeline: [...lob.timeline] }))
   };
 }
 
-function nowHHmm() {
-  return new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', hour12: false });
+const opsBoard = ref<LobsterOpsBoard>(cloneBoard(opsSeed));
+const opsSource = ref<'live' | 'mock'>('mock');
+const opsError = ref('');
+
+let pollTimer: ReturnType<typeof setTimeout> | null = null;
+let inFlight = false;
+
+function pollMs() {
+  if (typeof document === 'undefined') return 10_000;
+  return document.visibilityState === 'visible' ? 10_000 : 30_000;
 }
 
-timer = setInterval(tickOpsBoard, 2500);
+async function fetchOpsBoard() {
+  if (inFlight) return;
+  inFlight = true;
+  try {
+    const response = await fetch('/api/ops', {
+      method: 'GET',
+      cache: 'no-store',
+      headers: { Accept: 'application/json' }
+    });
+    if (!response.ok) {
+      throw new Error(`/api/ops ${response.status}`);
+    }
+
+    const data = (await response.json()) as Partial<LobsterOpsBoard>;
+    if (!data || !Array.isArray(data.lobsters)) {
+      throw new Error('invalid board payload');
+    }
+
+    opsBoard.value = {
+      generatedAt: data.generatedAt ?? new Date().toISOString(),
+      squadName: data.squadName ?? opsSeed.squadName,
+      activeCount: typeof data.activeCount === 'number' ? data.activeCount : 0,
+      lobsters: data.lobsters
+    } as LobsterOpsBoard;
+    opsSource.value = 'live';
+    opsError.value = '';
+  } catch (error) {
+    const fallback = cloneBoard(opsSeed);
+    fallback.generatedAt = new Date().toISOString();
+    fallback.squadName = `${opsSeed.squadName}（前端回退）`;
+    opsBoard.value = fallback;
+    opsSource.value = 'mock';
+    opsError.value = error instanceof Error ? error.message : String(error);
+  } finally {
+    inFlight = false;
+  }
+}
+
+function schedulePoll(immediate = false) {
+  if (pollTimer) {
+    clearTimeout(pollTimer);
+    pollTimer = null;
+  }
+
+  const delay = immediate ? 0 : pollMs();
+  pollTimer = setTimeout(async () => {
+    await fetchOpsBoard();
+    schedulePoll(false);
+  }, delay);
+}
+
+function onVisibilityChange() {
+  schedulePoll(false);
+}
+
+onMounted(() => {
+  schedulePoll(true);
+  if (typeof document !== 'undefined') {
+    document.addEventListener('visibilitychange', onVisibilityChange);
+  }
+});
 
 onBeforeUnmount(() => {
-  if (timer) clearInterval(timer);
+  if (pollTimer) clearTimeout(pollTimer);
+  if (typeof document !== 'undefined') {
+    document.removeEventListener('visibilitychange', onVisibilityChange);
+  }
 });
 
 const filteredCities = computed(() => {
@@ -127,6 +129,8 @@ const city = computed<CityRanking | null>(() => {
   const list = filteredCities.value;
   return list.find((c) => c.slug === selectedSlug.value) ?? list[0] ?? null;
 });
+
+const opsSourceText = computed(() => (opsSource.value === 'live' ? '数据源：/api/ops（实时）' : '数据源：mock（回退）'));
 
 function passBudget(item: Place) {
   switch (budgetMode.value) {
@@ -333,6 +337,8 @@ function timelineClass(type: 'info' | 'success' | 'warning' | 'error') {
         <div>
           <h2>🦞 {{ opsBoard.squadName }}</h2>
           <div class="muted">看板更新时间：{{ new Date(opsBoard.generatedAt).toLocaleString('zh-CN') }}</div>
+          <div class="muted">{{ opsSourceText }}</div>
+          <div v-if="opsError" class="muted">最近回退原因：{{ opsError }}</div>
         </div>
         <div class="ops-active">活跃龙虾：{{ opsBoard.activeCount }}</div>
       </div>

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "ops:start": "node scripts/ops-server.mjs",
     "generate": "node scripts/generate.mjs",
     "build": "npm run generate && vite build",
     "preview": "vite preview",

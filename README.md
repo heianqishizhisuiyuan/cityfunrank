@@ -25,8 +25,28 @@
 
 ```bash
 npm install
+```
+
+### 启动“真同步”龙虾看板（推荐双终端）
+
+终端 1：启动本地 ops 服务（聚合 OpenClaw CLI）
+
+```bash
+npm run ops:start
+```
+
+终端 2：启动前端
+
+```bash
 npm run dev
 ```
+
+前端将优先读取 `/api/ops`；若本地服务或 OpenClaw CLI 异常，会自动回退到内置 mock 数据。
+
+### 轮询节流策略
+
+- 页面前台（可见）：每 10 秒拉取一次 `/api/ops`
+- 页面后台（隐藏）：每 30 秒拉取一次 `/api/ops`
 
 ## 质量门禁
 

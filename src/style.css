@@ -81,6 +81,42 @@ select {
   gap: 10px;
 }
 
+.section-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #d7e2ff;
+}
+
+.quick-city-btn {
+  min-width: 88px;
+}
+
+.filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reset-btn {
+  background: #4a5a97;
+}
+
+.suggestions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestion-btn {
+  background: #35529f;
+}
+
+.ghost-btn {
+  background: transparent;
+  border: 1px solid #4762b4;
+}
+
 .route-head {
   display: flex;
   justify-content: space-between;
